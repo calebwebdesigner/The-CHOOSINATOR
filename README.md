@@ -12,4 +12,5 @@ Just manually type up a list or upload a .txt file (in a list format), and the C
 
 Tbh, I just wanted to make something that'll help me choose things in a fun way. Sometimes a little spontaneity can be added by letting the universe decide. Also, I just felt like making something to practice my HTML/CSS/JavaScript lol.
 
+
 Copyright © 2022, calebwebdesigner
