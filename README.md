@@ -1,5 +1,4 @@
 # The-CHOOSINATOR
-
 **What TF is this?**
 
 It's a wee web app I threw together to help bring a resolution to those moments when there's just too many options, and you just can't choose.
