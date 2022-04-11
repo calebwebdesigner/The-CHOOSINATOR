@@ -1,4 +1,4 @@
-# The CHOOSINATOR
+# The CHOOSINATOR!
 **Find it here: https://calebwebdesigner.dev/projects/theCHOOSINATOR/**
 
 **What TF is this?**
