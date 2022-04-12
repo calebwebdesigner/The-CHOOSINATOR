@@ -15,13 +15,8 @@ Just manually type up a list or upload a .txt file (in a list format), and the C
 Tbh, I just wanted to make something that'll help me choose things in a fun way. Sometimes a little spontaneity can be added by letting the universe decide. Also, I just felt like making something to practice my HTML/CSS/JavaScript lol.
 
 ![image](https://github.com/calebwebdesigner/The-CHOOSINATOR/blob/main/screen-desktop.png) 
-<div>
-    <img align=center src="https://github.com/calebwebdesigner/The-CHOOSINATOR/blob/main/screen-desktop.png"/>
-    <img align=center src="https://github.com/calebwebdesigner/The-CHOOSINATOR/blob/main/screen-mobile.png"/>
-<div>
 <p align="center">
-  <img width="600" height="200" src="https://github.com/calebwebdesigner/The-CHOOSINATOR/blob/main/screen-mobile.png">
+  <img src="https://github.com/calebwebdesigner/The-CHOOSINATOR/blob/main/screen-mobile.png">
 </p>
-![image](https://github.com/calebwebdesigner/The-CHOOSINATOR/blob/main/screen-mobile.png) 
 
 Copyright © 2022, calebwebdesigner
