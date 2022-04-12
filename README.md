@@ -1,6 +1,8 @@
 # The CHOOSINATOR!
 **Find it here: https://calebwebdesigner.dev/projects/theCHOOSINATOR/**
 
+![image](https://github.com/calebwebdesigner/The-CHOOSINATOR/blob/main/screen-desktop.png) 
+
 **What TF is this?**
 
 It's a wee responsive web app I threw together to help bring a resolution to those moments when there's just too many options, and you just can't choose.
@@ -14,7 +16,6 @@ Just manually type up a list or upload a .txt file (in a list format), and the C
 
 Tbh, I just wanted to make something that'll help me choose things in a fun way. Sometimes a little spontaneity can be added by letting the universe decide. Also, I just felt like making something to practice my HTML/CSS/JavaScript lol.
 
-![image](https://github.com/calebwebdesigner/The-CHOOSINATOR/blob/main/screen-desktop.png) 
 <p align="center">
   <img src="https://github.com/calebwebdesigner/The-CHOOSINATOR/blob/main/screen-mobile.png">
 </p>
