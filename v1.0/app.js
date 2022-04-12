@@ -272,9 +272,9 @@ if (isTouch) {
 
 
 // go! button functionality
-let goCheer = new Audio('sounds/cheer.mp3'); // create cheering audio variable
-goCheer.volume = 0.8; // make it a tad quieter
 go = () => {
+    let goCheer = new Audio('sounds/cheer.mp3'); // create cheering audio variable, needs to be created each time so if the go is spammed a new audio can play before the previous one ends
+    goCheer.volume = 0.8; // make it a tad quieter
     goButton.removeEventListener('mousedown', go); // stop the go button from being spammed while it's already running the go function
     chooserItemsDisplayed[2].classList.remove('the-final-choice'); // remove the glow effect (will be there if go has already been pressed)
     starsGlowStart(false); // start stars glow effect at high speed
