@@ -19,6 +19,9 @@ Tbh, I just wanted to make something that'll help me choose things in a fun way.
     <img align=center src="https://github.com/calebwebdesigner/The-CHOOSINATOR/blob/main/screen-desktop.png"/>
     <img align=center src="https://github.com/calebwebdesigner/The-CHOOSINATOR/blob/main/screen-mobile.png"/>
 <div>
+<p align="center">
+  <img width="600" height="200" src="https://github.com/calebwebdesigner/The-CHOOSINATOR/blob/main/screen-mobile.png">
+</p>
 ![image](https://github.com/calebwebdesigner/The-CHOOSINATOR/blob/main/screen-mobile.png) 
 
 Copyright © 2022, calebwebdesigner
