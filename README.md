@@ -20,4 +20,4 @@ Tbh, I just wanted to make something that'll help me choose things in a fun way.
   <img height="700" src="https://github.com/calebwebdesigner/The-CHOOSINATOR/blob/main/screenmobile.png">
 </p>
 
-Copyright © 2022, calebwebdesigner
+<p align="center">Copyright © 2022, calebwebdesigner</p>
