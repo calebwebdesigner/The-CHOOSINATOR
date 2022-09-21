@@ -1,0 +1,625 @@
+/* 
+copyright © 2022, calebwebdesigner
+made by: https://github.com/calebwebdesigner
+repo: https://github.com/calebwebdesigner/The-CHOOSINATOR
+*/
+
+/* custom fonts */
+@font-face {
+  font-family: 'Quicksand';
+  src: url('fonts/Quicksand/Quicksand-Regular.ttf') format('truetype'), url('fonts/Quicksand/Quicksand-Regular.woff') format('woff');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'Quicksand';
+  src: url('fonts/Quicksand/Quicksand-SemiBold.ttf') format('truetype'), url('fonts/Quicksand/Quicksand-SemiBold.woff') format('woff');
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'Quicksand';
+  src: url('fonts/Quicksand/Quicksand-Bold.ttf') format('truetype'), url('fonts/Quicksand/Quicksand-Bold.woff') format('woff');
+  font-weight: 700;
+}
+
+/* set defaults and page-wide values */
+html {
+  color: #ffffff;
+  font-size: 16px;
+}
+* {
+  cursor: default;
+  font-family: 'Quicksand', Arial, sans-serif;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #0e0e0e;
+  /* to make the footer stick to the bottom */
+  box-sizing: border-box;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+#content-container {
+  margin-bottom: 64px; /* keeps the footer at a minimum distance */
+  margin-top: auto; /* center the content on taller screens */
+}
+h1 {
+  font-size: 5rem !important;
+  font-weight: 700;
+}
+h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+h3 {
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+/* socials */
+.socials img {
+  padding: 2px;
+  margin: 12px 12px 0 0;
+  width: 32px;
+}
+.socials #github {
+  margin-right: 0; /* move the socials back to the center */
+}
+/* no need for a hover event with a touch screen, also touch devices can act wierd with "non-touch" events */
+@media (hover: hover) and (pointer: fine) {
+  .socials img:hover {
+    cursor: pointer;
+    padding: 1px;
+    transition-duration: 50ms;
+    width: 34px;
+  }
+}
+
+/* used for links directed to / (they're all inline with normal p text) */
+.home-link {
+  text-decoration: none;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* about */
+#about-link {
+  /* used to wrap the h3, to make the h3 only as wide as the text */
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+#about-link h3 {
+  margin: 8px 40px;
+}
+/* no need for a hover event with a touch screen, also touch devices can act wierd with "non-touch" events */
+@media (hover: hover) and (pointer: fine) {
+  #about-link h3:hover {
+    cursor: pointer;
+    text-shadow: 0 0 16px #00a6ed;
+    transition-duration: 125ms;
+  }
+}
+#about-popup {
+  background-color: #00a6edf8;
+  height: 0; /* keep popup initially hidden */
+  left: 0;
+  overflow: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #ffffff #0000005b;
+  position: fixed;
+  top: 0;
+  transition-duration: 500ms;
+  width: 100%;
+  z-index: 1;
+}
+#about-popup-close {
+  cursor: pointer;
+  float: right;
+  height: 32px;
+  padding: 40px 40px 8px 8px;
+  width: 32px;
+}
+/* no need for a hover event with a touch screen, also touch devices can act wierd with "non-touch" events */
+@media (hover: hover) and (pointer: fine) {
+  #about-popup-close:hover {
+    height: 40px;
+    padding: 36px 36px 4px 4px;
+    transition-duration: 80ms;
+    width: 40px;
+  }
+}
+#about-popup-text {
+  font-weight: 300;
+  padding: 40px;
+}
+#about-popup-text * {
+  color: #0e0e0e;
+}
+#about-popup-text h2 {
+  clear: right; /* move below "x" and not be mis-aligned by it */
+  text-align: center;
+}
+#about-popup-text h3 {
+  margin: 32px 0 16px;
+}
+#about-popup-text p {
+  margin: 8px 0 0;
+}
+
+/* heading */
+#heading {
+  align-items: center;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+#heading h2 {
+  color: #cdcdcd;
+  animation: fadeIn linear 500ms;
+  font-weight: bolder;
+  margin-top: 16px;
+  margin-bottom: -8px; /* reduce the space between the two title lines */
+}
+#choosinator-title {
+  align-items: center;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  height: 32px;
+  margin: 56px 0;
+}
+#choosinator-title h1 {
+  animation: fadeIn linear 1300ms;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+div.star-block:nth-child(1) {
+  margin: 24px 0 0;
+}
+.stars {
+  border: 4px solid #00435f;
+  border-radius: 50%;
+  box-shadow: 0px 0px 16px 0px #52525280 inset;
+  display: inline-block;
+  height: 24px;
+  margin: 2px 16px;
+  transition-duration: 250ms; /* causes the "pop" effect when lights first "turn on" */
+  width: 24px;
+}
+
+/* chooser */
+#chooser {
+  align-items: center;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto auto auto;
+  justify-content: center;
+  justify-items: center;
+  margin: 32px 0;
+}
+#chooser div {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 4px 0;
+  padding: 4px 0;
+  text-align: center;
+}
+#chooser div:nth-child(1) {
+  color: #ffffff1e;
+  grid-row: 1 / 1;
+}
+#chooser div:nth-child(2) {
+  color: #ffffff5e;
+  grid-row: 2 / 2;
+}
+#chooser div:nth-child(3) {
+  margin: 16px 0;
+  padding: 8px 0;
+  grid-row: 3 / 3;
+}
+#chooser div:nth-child(4) {
+  color: #ffffff5e;
+  grid-row: 4 / 4;
+}
+#chooser div:nth-child(5) {
+  color: #ffffff1e;
+  grid-row: 5 / 5;
+}
+/* glowing text effect for the final choice */
+.the-final-choice {
+  animation: glow 1s ease-in-out infinite alternate;
+}
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #00a6ed, 0 0 10px #00a6edf5, 0 0 15px #00a6eddd, 0 0 20px #00a6edc8, 0 0 30px #00a6edac, 0 0 35px #00a6ed94, 0 0 40px #00a6ed77, 0 0 45px #00a6ed36;
+  }
+  to {
+    text-shadow: 0 0 5px #eba4e8, 0 0 10px #eba4e8f5, 0 0 15px #eba4e8dd, 0 0 20px #eba4e8c8, 0 0 30px #eba4e8ac, 0 0 35px #eba4e894, 0 0 40px #eba4e877, 0 0 45px #eba4e836;
+  }
+}
+
+/* buttons section */
+#buttons {
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+#buttons button {
+  background-color: #eba4e8;
+  border: 4px solid #00a6ed;
+  border-radius: 4px;
+  box-shadow: 0 0 16px 0px #00a6ed80;
+  color: #0e0e0e; /* slightly off-black so as to be easier on the eyes */
+  cursor: pointer;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 4px 8px;
+  padding: 8px 8px;
+  transition-duration: 75ms;
+  width: 160px;
+}
+#go {
+  font-size: 2rem !important;
+}
+.side-buttons {
+  /* to keep the go button perfectly centered, with other buttons evenly ditributed on either side */
+  display: flex;
+  align-items: center;
+  min-width: 280px;
+}
+#buttons .side-buttons:nth-child(1) {
+  justify-content: flex-end;
+  margin-left: 12px;
+}
+#buttons .side-buttons:nth-child(3) {
+  justify-content: flex-start;
+  margin-right: 12px;
+}
+
+/* popup */
+#list-popup-close-bg {
+  display: none;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 50;
+}
+#list-popup {
+  background-color: #eba4e8f6;
+  border-radius: 4px;
+  box-shadow: 0 8px 16px 0px #0e0e0ec5;
+  display: none;
+  height: 95%;
+  left: 50%;
+  overflow: auto;
+  position: fixed;
+  scrollbar-color: #00a6ed #0000005b;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  z-index: 51;
+}
+#list-popup-close-container {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 12px;
+  position: sticky; /* keep button position on screen as user scrolls */
+  top: 12px; /* place button in position it'll be sticky at */
+}
+#list-popup-close {
+  cursor: pointer;
+  height: 32px;
+  padding: 4px 4px;
+  width: 32px;
+}
+/* no need for a hover event with a touch screen, also touch devices can act wierd with "non-touch" events */
+@media (hover: hover) and (pointer: fine) {
+  #list-popup-close:hover {
+    height: 40px;
+    padding: 0 0;
+    transition-duration: 80ms;
+    width: 40px;
+  }
+}
+
+/* edit list popup */
+#list-popup form {
+  display: none; /* keep invisible unless edit list is clicked, display will = "flex" then */
+  align-items: center;
+  flex-flow: column;
+  justify-content: flex-start;
+  height: 90%;
+  width: 100%;
+}
+#list-popup form textarea {
+  /* edit list user input box */
+  background-color: #0e0e0e;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 8px 16px 0px #0e0e0ec5;
+  color: #ffffff;
+  cursor: text;
+  font-size: 1.25rem;
+  min-height: 180px;
+  height: 80%;
+  margin: 12px 0 52px;
+  outline: none;
+  padding: 16px 32px;
+  resize: none;
+  transition-duration: 200ms;
+  width: 85%;
+}
+#list-popup form textarea:focus {
+  box-shadow: 0 10px 24px 0px #0e0e0ec5;
+}
+#list-popup form input {
+  /* edit list submit button */
+  background-color: #0e0e0e;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 4px 16px 0px #0e0e0ec5;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: auto;
+  margin-bottom: 16px;
+  transition-duration: 75ms;
+  height: 56px;
+  width: 240px;
+}
+
+/* upload list popup*/
+#upload-list-container {
+  display: none; /* keep invisible unless upload list is clicked, display will = "flex" then */
+  flex-flow: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 90%;
+  width: 100%;
+}
+#upload-list-display {
+  /* display box showing the items from text file */
+  background-color: #0e0e0e;
+  border-radius: 4px;
+  box-shadow: 0 8px 16px 0px #0e0e0ec5;
+  color: #ffffff;
+  height: 80%;
+  margin: 12px 0 52px;
+  overflow: auto;
+  padding: 16px 32px;
+  scrollbar-color: #00a6ed #0000005b;
+  transition-duration: 200ms;
+  width: 85%;
+}
+#upload-list-display ol {
+  color: #ffffff;
+  counter-reset: li;
+  font-size: 1.25rem;
+  list-style: none; /* remove default bullets, that have no space or custom color */
+  padding: 16px 0 16px; /* no padding left side to keep it even with show list aesthetics */
+}
+#upload-list-display ol li::before {
+  /* create list numbering with custom parameters */
+  content: counter(li);
+  color: #ffffff88;
+  display: inline-block; /* needed to add space between the list number and text */
+  width: 48px; /* adds space between list number and text */
+  margin-right: 4px; /*adds a little more precise space on right side of list number */
+}
+#upload-list-display ol li {
+  counter-increment: li;
+}
+#upload-list-button-container {
+  /* center the elements */
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 56px;
+  column-gap: 16px;
+  align-items: center;
+  justify-items: center;
+}
+#upload-list-input-button,
+#upload-list-confirm-button {
+  /* upload list buttons */
+  background-color: #0e0e0e;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 4px 16px 0px #0e0e0ec5;
+  color: #ffffff !important;
+  cursor: pointer;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  transition-duration: 75ms;
+  height: 56px;
+  width: 240px;
+}
+#upload-list-input {
+  /* upload list input element */
+  display: none; /* hide this, so a custom button can be shown underneath */
+}
+
+/* show list popup */
+#show-list-display {
+  color: #0e0e0e;
+  counter-reset: li;
+  display: none;
+  font-size: 1.25rem;
+  list-style: none; /* remove default bullets, that have no space or custom color */
+  margin-top: -32px;
+  padding: 16px 32px;
+}
+#show-list-display li::before {
+  /* create list numbering with custom parameters */
+  content: counter(li);
+  color: #0e0e0e88;
+  display: inline-block; /* needed to add space between the list number and text */
+  width: 48px; /* adds space between list number and text */
+  margin-right: 4px; /*adds a little more precise space on right side of list number */
+}
+#show-list-display li {
+  counter-increment: li;
+}
+
+/* footer */
+#footer {
+  /* center the elements */
+  align-items: center;
+  display: grid;
+  justify-items: center;
+  /* to make the footer stick at the bottom */
+  margin: auto 0 8px;
+  height: 80px;
+}
+#footer p {
+  /* add some space between the text and icons */
+  margin-top: 8px;
+}
+
+/* responsive sizing */
+@media only screen and (max-width: 1050px) {
+  /* add scrollbar */
+  #about-popup {
+    overflow: auto;
+  }
+}
+@media only screen and (max-width: 850px) {
+  .side-buttons {
+    flex-flow: column;
+    min-width: 176px; /* set slightly above button width to stop jittering effect on hover */
+  }
+}
+@media only screen and (max-width: 800px) {
+  #list-popup {
+    width: 90%;
+  }
+  #list-popup form textarea {
+    width: 80%;
+  }
+  #upload-list-display {
+    width: 80%;
+  }
+  #upload-list-display ol {
+    padding: 0; /* give the displayed list the more real estate */
+  }
+}
+@media only screen and (max-width: 700px) {
+  #upload-list-display {
+    margin-bottom: 32px;
+  }
+  #upload-list-button-container {
+    grid-template-columns: auto;
+  }
+  #upload-list-input-button {
+    margin-bottom: 8px;
+  }
+}
+@media only screen and (max-width: 650px) {
+  #about-link h3 {
+    font-size: 1.25rem;
+    margin: 4px 24px;
+  }
+  .star-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+  }
+  #heading h2 {
+    margin-top: 8px;
+  }
+  #choosinator-title {
+    margin: 48px 0; /* lessen space around "CHOOSINATOR!" */
+  }
+  #choosinator-title h1 {
+    font-size: 12.5vw !important; /* make the text variable to the screen width */
+  }
+}
+@media only screen and (max-width: 600px) {
+  #list-popup form textarea {
+    width: 75%;
+  }
+  #upload-list-display {
+    width: 75%;
+  }
+}
+@media only screen and (max-width: 550px) {
+  #buttons {
+    flex-flow: column nowrap;
+  }
+  #buttons button {
+    width: 200px;
+  }
+  #buttons button:nth-child(2) {
+    order: 1;
+  }
+  #buttons .side-buttons:nth-child(1) {
+    order: 2;
+  }
+  #buttons .side-buttons:nth-child(3) {
+    order: 3;
+  }
+  #buttons .side-buttons:nth-child(1) {
+    margin-left: 0;
+  }
+  #buttons .side-buttons:nth-child(3) {
+    margin-right: 0;
+  }
+}
+@media only screen and (max-width: 500px) {
+  #heading h2 {
+    font-size: 8vw;
+  }
+  #choosinator-title {
+    margin: 32px 0; /* lessen space around "CHOOSINATOR!" */
+  }
+  #list-popup form input {
+    height: 60px; /* give edit list submit button a set width so it's not too thin, it's thin on mobile so this fixes that bug */
+  }
+  #upload-list-display {
+    padding: 16px 16px;
+  }
+  #show-list-display {
+    margin-top: -8px;
+    padding: 16px 16px;
+  }
+}
+@media only screen and (max-width: 375px) {
+  #choosinator-title {
+    margin: 24px 0; /* lessen space around "CHOOSINATOR!" */
+  }
+}
+@media only screen and (max-width: 350px) {
+  #list-popup form input {
+    width: 208px;
+  }
+  #upload-list-input-button,
+  #upload-list-confirm-button {
+    width: 208px;
+  }
+}
+@media only screen and (max-width: 318px) {
+  .star-block div:nth-child(8),
+  .star-block div:nth-child(9) {
+    display: none;
+  }
+}
+@media only screen and (max-height: 600px) {
+  /* add scrollbar */
+  #about-popup {
+    overflow: auto;
+  }
+}
