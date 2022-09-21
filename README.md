@@ -1,7 +1,7 @@
 # The CHOOSINATOR!
 **Find it here: https://calebwebdesigner.dev/projects/theCHOOSINATOR/**
 
-![image](https://github.com/calebwebdesigner/The-CHOOSINATOR/blob/main/screendesktop.png) 
+![image](https://github.com/calebwebdesigner/The-CHOOSINATOR/blob/main/ignore/v1-screenshots/screendesktop.png) 
 
 **What TF is this?**
 
@@ -17,7 +17,7 @@ Just manually type up a list or upload a .txt file (in a list format), and the C
 Tbh, I just wanted to make something that'll help me choose things in a fun way. Sometimes a little spontaneity can be added by letting the universe decide. Also, I just felt like making something to practice my HTML/CSS/JavaScript lol.
 
 <p align="center">
-  <img height="700" src="https://github.com/calebwebdesigner/The-CHOOSINATOR/blob/main/screenmobile.png">
+  <img height="700" src="https://github.com/calebwebdesigner/The-CHOOSINATOR/blob/main/ignore/v1-screenshots/screenmobile.png">
 </p>
 
 <p align="center">Copyright © 2022, calebwebdesigner</p>

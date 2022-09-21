@@ -77,13 +77,6 @@ h3 {
   }
 }
 
-/* used for links directed to / (they're all inline with normal p text) */
-.home-link {
-  text-decoration: none;
-  color: #ffffff;
-  cursor: pointer;
-}
-
 /* about */
 #about-link {
   /* used to wrap the h3, to make the h3 only as wide as the text */
