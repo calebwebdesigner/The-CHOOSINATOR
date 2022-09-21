@@ -4,136 +4,133 @@ made by: https://github.com/calebwebdesigner
 repo: https://github.com/calebwebdesigner/The-CHOOSINATOR
 -->
 
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The CHOOSINATOR! | By calebwebdesigner</title>
-    <link rel="shortcut icon" type="image/png" href="img/icon.png"> <!-- favicon -->
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-
+    <link rel="shortcut icon" type="image/png" href="img/icon.png" />
+    <!-- favicon -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <!-- about, not in content-container so on longer screens the about stays at the top of the page, while the content will be center-aligned -->
     <div id="about">
-        <div id="about-link"> <!-- wrap the h3 so it can be positioned correctly -->
-            <h3>About</h3>
+      <div id="about-link">
+        <!-- wrap the h3 so it can be positioned correctly -->
+        <h3>About</h3>
+      </div>
+      <div id="about-popup">
+        <img id="about-popup-close" src="img/close.svg" alt="✖" />
+        <div id="about-popup-text">
+          <h2>ABOUT</h2>
+          <h3>What TF is this?</h3>
+          <p>It's a wee responsive web app I threw together to help bring a resolution to those moments when there's just too many options, and you just can't choose.</p>
+          <p>Got too many dining options? Too many good movies or games you want to blast through? Too many places to visit and things to do? Sick of arguing over who gets what? Or maybe you're just shit at deciding what to do? Well, the CHOOSINATOR is here to help!</p>
+          <p>Just manually type up a list or upload a .txt file (in a list format), and the CHOOSINATOR will do the choosing for you!</p>
+          <h3>Why tho?</h3>
+          <p>Tbh, I just wanted to make something that'll help me choose things in a fun way. Sometimes a little spontaneity can be added by letting the universe decide. Also, I just felt like making something to practice my HTML/CSS/JavaScript lol.</p>
+          <h3>Credits:</h3>
+          <p>Designed and created by me, <a class="home-link" href="/">calebwebdesigner</a>.</p>
+          <div class="socials">
+            <a href="https://www.instagram.com/calebwebdesigner/" target="_blank"><img src="img/insta-black.svg" alt="IN: @calebwebdesigner" /></a>
+            <a href="https://github.com/calebwebdesigner/" target="_blank"><img src="img/github-black.svg" alt="GH: calebwebdesigner" /></a>
+          </div>
         </div>
-        <div id="about-popup">
-            <img id="about-popup-close" src="img/close.svg" alt="✖">
-            <div id="about-popup-text">
-                <h2>ABOUT</h2>
-                <h3>What TF is this?</h3>
-                <p>It's a wee responsive web app I threw together to help bring a resolution to those moments when there's just too many options, and you just can't choose.</p>
-                <p>Got too many dining options? Too many good movies or games you want to blast through? Too many places to visit and things to do? Sick of arguing over who gets what? Or maybe you're just shit at deciding what to do? Well, the CHOOSINATOR is here to help!</p>
-                <p>Just manually type up a list or upload a .txt file (in a list format), and the CHOOSINATOR will do the choosing for you!</p>
-                <h3>Why tho?</h3>
-                <p>Tbh, I just wanted to make something that'll help me choose things in a fun way. Sometimes a little spontaneity can be added by letting the universe decide. Also, I just felt like making something to practice my HTML/CSS/JavaScript lol.</p>
-                <h3>Credits:</h3>
-                <p>Designed and created by me, calebwebdesigner.</p>
-                <div class="socials">
-                    <a href="https://www.instagram.com/calebwebdesigner/" target="_blank"><img src="img/insta-black.svg" alt="IN: @calebwebdesigner"></a>
-                    <a href="https://github.com/calebwebdesigner/The-CHOOSINATOR/" target="_blank"><img src="img/github-black.svg" alt="GH: calebwebdesigner"></a>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
-
 
     <!-- main content -->
     <div id="content-container">
-        <!-- heading -->
-        <div id="heading">
-            <div class="star-block">
-                <div class="stars"></div>
-                <div class="stars"></div>
-                <div class="stars"></div>
-                <div class="stars"></div>
-                <div class="stars"></div>
-                <div class="stars"></div>
-                <div class="stars"></div>
-                <div class="stars"></div>
-                <div class="stars"></div>
-            </div>
-            <h2>WELCOME TO THE</h2>
-            <div id="choosinator-title">
-                <h1>CHOOSINATOR!</h1>
-            </div>
-            <div class="star-block">
-                <div class="stars"></div>
-                <div class="stars"></div>
-                <div class="stars"></div>
-                <div class="stars"></div>
-                <div class="stars"></div>
-                <div class="stars"></div>
-                <div class="stars"></div>
-                <div class="stars"></div>
-                <div class="stars"></div>
-            </div>
+      <!-- heading -->
+      <div id="heading">
+        <div class="star-block">
+          <div class="stars"></div>
+          <div class="stars"></div>
+          <div class="stars"></div>
+          <div class="stars"></div>
+          <div class="stars"></div>
+          <div class="stars"></div>
+          <div class="stars"></div>
+          <div class="stars"></div>
+          <div class="stars"></div>
         </div>
-
-
-        <!-- chooser -->
-        <div id="chooser">
-            <div>количество 1</div>
-            <div>numero 2</div>
-            <div>number 3</div>
-            <div>номер 4</div>
-            <div>numéro 5</div>
+        <h2>WELCOME TO THE</h2>
+        <div id="choosinator-title">
+          <h1>CHOOSINATOR!</h1>
         </div>
-
-
-        <!-- buttons -->
-        <div id="buttons">
-            <div class="side-buttons">
-                <button id="edit-list">Add to List</button>
-                <button id="upload-list">Upload File</button>
-            </div>
-            <button id="go">GO!</button>
-            <div class="side-buttons">
-                <button id="show-list">Show List</button>
-                <button id="clear-list">Clear List</button>
-            </div>
+        <div class="star-block">
+          <div class="stars"></div>
+          <div class="stars"></div>
+          <div class="stars"></div>
+          <div class="stars"></div>
+          <div class="stars"></div>
+          <div class="stars"></div>
+          <div class="stars"></div>
+          <div class="stars"></div>
+          <div class="stars"></div>
         </div>
-        <div id="list-popup-close-bg"></div>
-        <div id="list-popup">
-            <div id="list-popup-close-container">
-                <img id="list-popup-close" src="img/close.svg" alt="✖">
-            </div>
-            <!-- edit list -->
-            <form>
-                <textarea id="list-user-input" cols="30" rows="10"></textarea>
-                <input id="edit-list-submit" type="button" value="Add">
-            </form>
-            <!-- upload list -->
-            <div id="upload-list-container">
-                <div id="upload-list-display">
-                    <ol>Make sure you're .txt file is in a list format! (:</ol>
-                </div>
-                <div id="upload-list-button-container">
-                    <input id="upload-list-input" type="file">
-                    <button id="upload-list-input-button" onclick="document.getElementById('upload-list-input').click();">Select File</button>
-                    <button id="upload-list-confirm-button">Confirm</button>
-                </div>
-            </div>
-            <!-- show list -->
-            <ol id="show-list-display"></ol>
+      </div>
+
+      <!-- chooser -->
+      <div id="chooser">
+        <div>количество 1</div>
+        <div>numero 2</div>
+        <div>number 3</div>
+        <div>номер 4</div>
+        <div>numéro 5</div>
+      </div>
+
+      <!-- buttons -->
+      <div id="buttons">
+        <div class="side-buttons">
+          <button id="edit-list">Add to List</button>
+          <button id="upload-list">Upload File</button>
         </div>
+        <button id="go">GO!</button>
+        <div class="side-buttons">
+          <button id="show-list">Show List</button>
+          <button id="clear-list">Clear List</button>
+        </div>
+      </div>
+      <div id="list-popup-close-bg"></div>
+      <div id="list-popup">
+        <div id="list-popup-close-container">
+          <img id="list-popup-close" src="img/close.svg" alt="✖" />
+        </div>
+        <!-- edit list -->
+        <form>
+          <textarea id="list-user-input" cols="30" rows="10"></textarea>
+          <input id="edit-list-submit" type="button" value="Add" />
+        </form>
+        <!-- upload list -->
+        <div id="upload-list-container">
+          <div id="upload-list-display">
+            <ol>
+              Make sure you're .txt file is in a list format! (:
+            </ol>
+          </div>
+          <div id="upload-list-button-container">
+            <input id="upload-list-input" type="file" />
+            <button id="upload-list-input-button" onclick="document.getElementById('upload-list-input').click();">Select File</button>
+            <button id="upload-list-confirm-button">Confirm</button>
+          </div>
+        </div>
+        <!-- show list -->
+        <ol id="show-list-display"></ol>
+      </div>
     </div>
-
 
     <!-- footer -->
     <div id="footer">
-        <div class="socials">
-            <a href="https://www.instagram.com/calebwebdesigner/" target="_blank"><img id="insta" src="img/insta.svg" alt="IN: @calebwebdesigner"></a>
-            <a href="https://github.com/calebwebdesigner/The-CHOOSINATOR/" target="_blank"><img id="github" src="img/github.svg" alt="GH: calebwebdesigner"></a>
-        </div>
-        <p>© Copyright 2022, calebwebdesigner</p>
+      <div class="socials">
+        <a href="https://www.instagram.com/calebwebdesigner/" target="_blank"><img id="insta" src="img/insta.svg" alt="IN: @calebwebdesigner" /></a>
+        <a href="https://github.com/calebwebdesigner/" target="_blank"><img id="github" src="img/github.svg" alt="GH: calebwebdesigner" /></a>
+      </div>
+      <p>© Copyright 2022, <a class="home-link" href="/">calebwebdesigner</a></p>
     </div>
-<script src="app.js"></script>
-</body>
+    <script src="app.js"></script>
+  </body>
 </html>
