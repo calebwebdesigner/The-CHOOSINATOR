@@ -1,5 +1,5 @@
 # The CHOOSINATOR!
-**Find it here: https://calebwebdesigner.dev/projects/theCHOOSINATOR/**
+**Find it here: https://thechoosinator.calebwebdesigner.xyz**
 
 ![image](https://github.com/calebwebdesigner/The-CHOOSINATOR/blob/main/ignore/v1-screenshots/screendesktop.png) 
 
